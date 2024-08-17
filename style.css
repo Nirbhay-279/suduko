@@ -1,0 +1,222 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: black;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 420px;
+}
+
+.Header {
+    background-color: #1109ad;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 12px 12px 0 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.Header #name {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* Existing CSS here */
+
+/* Existing CSS here */
+
+.scrolling-strip {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    font-size: 30px; /* Adjust font size as needed */
+    padding: 10px 0;
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for effect */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.scrolling-strip .inner {
+    display: inline-block;
+    padding-left: 100%; /* Start off-screen */
+    animation: scroll-left 15s linear infinite; /* Adjust duration for faster or slower scrolling */
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.difficulty-selector {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.difficulty-selector label {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+
+.difficulty-selector {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.difficulty-selector label {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+
+.difficulty-selector {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+}
+
+.difficulty-selector label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+.difficulty-selector select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.difficulty-selector select:focus {
+    border-color: #1abc9c; /* Modern teal color */
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+    outline: none;
+}
+
+.difficulty-selector option {
+    padding: 10px;
+}
+
+
+.sudoku_grid {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
+    gap: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+     /* Border around the puzzle */
+    
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.sudoku_grid div {
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    transition: background-color 0.2s;
+}
+
+.sudoku_grid div:hover {
+    background-color: #f9f9f9;
+}
+
+.box1 {
+    background-color: #fafafa;
+}
+
+.box2 {
+    background-color: #f0f0f0;
+}
+
+.box3 {
+    background-color: #fafafa;
+}
+
+.bt {
+    border-top: 2px solid #333;
+}
+
+.bb {
+    border-bottom: 2px solid #333;
+}
+
+.bl {
+    border-left: 2px solid #333;
+}
+
+.br {
+    border-right: 2px solid #333;
+}
+
+.Buttons {
+    display: flex;
+    gap: 10px; /* Spacing between buttons */
+    margin: 20px 0;
+}
+
+.Buttons button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.Buttons button:hover {
+    background-color: #2980b9;
+}
+
+.Buttons button:active {
+    transform: scale(0.98);
+    background-color: green;
+}
